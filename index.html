@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="link-adicionar">Adicionar Tarefa</a></li>
+                <li><a href="#" id="link-visualizar">Visualizar Tarefas</a></li>
+                <li><a href="#" id="link-sobre">Sobre</a></li>
+                <li><button id="toggle-dark-mode">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="adicionar" class="section">
+            <div class="card1 center">
+                <h2>Adicionar Tarefa</h2>
+                <form id="form-tarefa">
+                    <label for="tarefa">Nome da Tarefa:</label>
+                    <input type="text" id="tarefa" name="tarefa" required>
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Concluída">Concluída</option>
+                    </select>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </section>
+        
+
+        <section id="visualizar" class="section">
+            <h2>Visualizar Tarefas</h2>
+            <input type="text" id="pesquisa" placeholder="Pesquisar Tarefas">
+            <button id="sort-nome">Ordenar por Nome</button>
+            <button id="sort-status">Ordenar por Status</button>
+            <div id="contagem-tarefas"></div>
+            <div id="lista-tarefas" class="tarefas-container"></div>
+        </section>
+        <section id="sobre" class="section">
+            <h2>Sobre</h2>
+            <p>Esta aplicação de lista de tarefas foi desenvolvida para gerenciar suas atividades diárias.</p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal1">
+        <div id="modal1-content" class="modal1-content">
+            <!-- Contenido dinámico generado por JavaScript -->
+        </div>
+        <span id="modal-close" class="modal-close">&times;</span>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

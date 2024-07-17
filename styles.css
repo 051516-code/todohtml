@@ -1,0 +1,253 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a,
+nav ul li button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 6rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    display: none;
+    width: 80%;
+}
+
+
+.section.active {
+    display: block;
+}
+
+.card1 {
+    background: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(59, 59, 59, 0.705);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+
+
+
+.concluida {
+    /* background-color: green; */
+    border-right: 10px solid rgb(51, 255, 0);
+}
+.pendiente {
+    border-right: 10px solid rgb(187, 16, 16);
+}
+
+form {
+    margin-top: 1rem;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.tarefas-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: ; */
+    flex-direction: row;
+}
+
+.tarefas-container .card {
+    width: calc(100% - 2rem);
+    max-width: 300px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(59, 59, 59, 0.705);
+    border-radius: 8px;
+}
+
+button.delete, button.complete, button.edit {
+    background-color: #f44336;
+    margin-left: 5px;
+}
+
+button.complete {
+    background-color: #4CAF50;
+}
+
+button.edit {
+    background-color: #2196F3;
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+button.complete:hover {
+    background-color: #45a049;
+}
+
+button.edit:hover {
+    background-color: #1e88e5;
+}
+
+#pesquisa {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .card {
+    background: #444;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode textarea,
+body.dark-mode button {
+    background: #555;
+    color: white;
+    border: 1px solid #666;
+}
+
+body.dark-mode nav ul li a,
+body.dark-mode nav ul li button {
+    color: white;
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li button:hover {
+    text-decoration: underline;
+}
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal1-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.modal1-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
